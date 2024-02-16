@@ -30,6 +30,9 @@ export class User {
   @Column({ length: 200, nullable: true })
   address: string;
 
+  @Column({ length: 50, nullable: true })
+  crmId: string;
+
   // Entity listeners
   @BeforeInsert()
   @BeforeUpdate()
