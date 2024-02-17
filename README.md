@@ -5,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">This repository contains a sample NestJS application demonstrating several backend development skills, particularly focusing on JavaScript and TypeScript. The project showcases clean and understandable code, leveraging NestJS framework's advantages for modularity, maintenance, and scalability.</p>
+  <p align="center">This repository contains a sample NestJS application demonstrating several backend development skills, particularly focusing on JavaScript and TypeScript. The project showcases clean and understandable code, leveraging NestJS framework's advantages for modularity, maintenance, and scalability. Also integrates with the HubSpot API to manage [contact]() and [company](https://developers.hubspot.com/docs/api/crm/companies) objects.</p>
     <p align="center">
 
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
@@ -47,7 +47,9 @@ This sample application includes the following features:
 
 - Data Validation: Implemented DTOs for request data validation and interfaces for type safety.
 
-- TypeORM [Subscribers](https://orkhan.gitbook.io/typeorm/docs/listeners-and-subscribers): Used TypeORM subscribers for handling HubSpot contact and company creations before inserting at entities.
+- Hubspot CRM API: integrates with the HubSpot API to manage [contacts](https://developers.hubspot.com/docs/api/crm/contacts) and [companies](https://developers.hubspot.com/docs/api/crm/companies) objects. Company to Contact association.
+
+- TypeORM [Subscribers](https://orkhan.gitbook.io/typeorm/docs/listeners-and-subscribers): Used TypeORM subscribers for handling HubSpot contacts and companies creation before inserting at entities.
 
 ## Installation and Usage
 
@@ -59,7 +61,7 @@ To run the application, follow these steps:
 - Run the application in development mode using
 
 ```
-yarn start:dev.
+yarn start:dev
 ```
 
 ## Test
