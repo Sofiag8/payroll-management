@@ -4,6 +4,7 @@ import { ApiResponse } from '@nestjs/swagger';
 import { UserService } from './user.service';
 import { User } from 'src/infrastructure/database/entities/user.entity';
 import { CreateUserResponse } from './interfaces/create-user-response.interface';
+import SignInDto from './dtos/sign-in.dto';
 
 @Controller('user')
 export class UserController {
@@ -24,5 +25,23 @@ export class UserController {
   })
   signup(@Body() userData: CreateUserDto): Promise<CreateUserResponse> {
     return this.userService.createUser(userData);
+  }
+
+  @Post('/signin')
+  @ApiResponse({
+    status: 200,
+    description: 'The account has been authenticated.',
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Bad request, some of the fields did not pass the validation',
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'Account not found',
+  })
+  async signIn(@Body() userLogin: SignInDto) {
+    const jwt = this.userService.signIn(userLogin);
+    return jwt;
   }
 }

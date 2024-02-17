@@ -5,6 +5,7 @@ import { TypeOrmConfig } from './config/typeorm-config';
 import UserSubscriber from './subscribers/user.subscriber';
 import { HubspotModule } from 'src/providers/hubspot/hubspot.module';
 import { HubspotService } from 'src/providers/hubspot/hubspot.service';
+import CompanySubscriber from './subscribers/company.subscriber';
 
 @Module({
   imports: [
@@ -14,7 +15,7 @@ import { HubspotService } from 'src/providers/hubspot/hubspot.service';
       useFactory: TypeOrmConfig,
     }),
   ],
-  providers: [ConfigService, UserSubscriber, HubspotService],
+  providers: [ConfigService, UserSubscriber, CompanySubscriber, HubspotService],
   exports: [TypeOrmModule],
 })
 export class DatabaseModule {}
