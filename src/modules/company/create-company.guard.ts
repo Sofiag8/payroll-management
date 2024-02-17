@@ -3,7 +3,7 @@ import { Reflector } from '@nestjs/core';
 
 @Injectable()
 export class CreateCompanyGuard implements CanActivate {
-  constructor(private reflector: Reflector) {}
+  constructor() {}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
