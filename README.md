@@ -5,7 +5,7 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">This repository contains a sample NestJS application demonstrating several backend development skills, particularly focusing on JavaScript and TypeScript. The project showcases clean and understandable code, leveraging NestJS framework's advantages for modularity, maintenance, and scalability. Also integrates with the HubSpot API to manage [contact]() and [company](https://developers.hubspot.com/docs/api/crm/companies) objects.</p>
+  <p align="center">This repository contains a sample NestJS application demonstrating several backend development skills, particularly focusing on JavaScript and TypeScript. The project showcases clean and understandable code, leveraging NestJS framework's advantages for modularity, maintenance, and scalability. Also integrates with the HubSpot API to manage contact and company objects.</p>
     <p align="center">
 
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
