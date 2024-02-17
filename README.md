@@ -5,44 +5,61 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">This repository contains a sample NestJS application demonstrating several backend development skills, particularly focusing on JavaScript and TypeScript. The project showcases clean and understandable code, leveraging NestJS framework's advantages for modularity, maintenance, and scalability.</p>
     <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
+
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Why NestJS?
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[NestJS](https://github.com/nestjs/nest) is a powerful framework for building efficient, reliable, and scalable server-side applications. Here's why it's beneficial, especially when TypeScript is a requirement:
 
-## Installation
+- Type Safety: TypeScript ensures type safety, reducing runtime errors and improving code maintainability.
 
-```bash
-$ yarn install
+- Modular Architecture: NestJS promotes a modular architecture, making it easier to organize code into reusable and independent modules.
+
+- Decorator-based Programming: Leveraging decorators simplifies code structuring and enhances readability.
+
+- Built-in Dependency Injection: NestJS provides built-in dependency injection, facilitating the creation of loosely coupled components.
+
+## Business Context?
+
+This sample application reflects a real-world scenario where HubSpot CRM integration was required for a payroll management system. The project involved handling users, company, employees, and employers data within the application, requiring integration with HubSpot for sales and marketing departments.
+
+### Implementation Details
+
+- HubSpot Integration: Implemented using NestJS modules and services to interact with the HubSpot CRM API.
+- AWS S3 Integration: Managed user profile picture uploads to AWS S3 for storage.
+- Third-Party Email Integration: Integrated third-party email services for validation and communication purposes.
+
+## Application Features
+
+This sample application includes the following features:
+
+- TypeORM for PostgreSQL: Utilized TypeORM for PostgreSQL database management, ensuring data integrity and reliability, crucial for financial applications like payroll management.
+
+- Authentication: Implemented JWT-based signup and signin functionalities for user authentication.
+
+- Authorization: Utilized Passport strategy and custom NestJS guards for secure route authorization.
+
+- Password Hashing: Employed bcrypt library for secure password hashing and decryption.
+
+- Data Validation: Implemented DTOs for request data validation and interfaces for type safety.
+
+- TypeORM [Subscribers](https://orkhan.gitbook.io/typeorm/docs/listeners-and-subscribers): Used TypeORM subscribers for handling HubSpot contact and company creations before inserting at entities.
+
+## Installation and Usage
+
+To run the application, follow these steps:
+
+- Clone this repository.
+- Install dependencies using npm install or yarn install.
+- Set up environment variables as per .env.example.
+- Run the application in development mode using
+
 ```
-
-## Running the app
-
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+yarn start:dev.
 ```
 
 ## Test
@@ -57,16 +74,6 @@ $ yarn run test:e2e
 # test coverage
 $ yarn run test:cov
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
