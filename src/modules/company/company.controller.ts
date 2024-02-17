@@ -1,7 +1,7 @@
 import { Body, Controller, Post, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiResponse } from '@nestjs/swagger';
 import { CompanyService } from './company.service';
-import Company from 'src/infrastructure/database/entities/company.entity';
+import { Company } from '../../infrastructure/database/entities/company.entity';
 import { AuthGuard } from '@nestjs/passport';
 import { CreateCompanyGuard } from './create-company.guard';
 import CreateCompanyDto from './dtos/create-company.dto';

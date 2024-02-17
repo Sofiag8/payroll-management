@@ -1,4 +1,4 @@
-import { hashPassword } from 'src/utils/hash-password';
+import { hashPassword } from '../../../utils/hash-password';
 import {
   Column,
   Entity,

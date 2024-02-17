@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { HubspotService } from 'src/providers/hubspot/hubspot.service';
-import Company from 'src/infrastructure/database/entities/company.entity';
+import { Company } from 'src/infrastructure/database/entities/company.entity';
 import { EntitySubscriberInterface, InsertEvent, DataSource } from 'typeorm';
 import { HubspotCompanyCreatedResponse } from 'src/providers/hubspot/interfaces/company-object.interface';
 

@@ -3,7 +3,7 @@ import { DatabaseModule } from 'src/infrastructure/database/database.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CompanyService } from './company.service';
 import { CompanyController } from './company.controller';
-import Company from 'src/infrastructure/database/entities/company.entity';
+import { Company } from 'src/infrastructure/database/entities/company.entity';
 import { PassportModule } from '@nestjs/passport';
 import { User } from 'src/infrastructure/database/entities/user.entity';
 import { UserModule } from '../user/user.module';

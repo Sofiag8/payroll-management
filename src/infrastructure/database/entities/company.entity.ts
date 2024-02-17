@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import { User } from './user.entity';
 
 @Entity()
-export default class Company {
+export class Company {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

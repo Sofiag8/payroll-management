@@ -1,6 +1,6 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import Company from 'src/infrastructure/database/entities/company.entity';
+import { Company } from '../../infrastructure/database/entities/company.entity';
 import { Repository } from 'typeorm';
 import { UserService } from '../user/user.service';
 import CreateCompanyDto from './dtos/create-company.dto';

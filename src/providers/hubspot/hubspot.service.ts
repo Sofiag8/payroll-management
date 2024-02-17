@@ -3,7 +3,7 @@ import { Client } from '@hubspot/api-client';
 import { ConfigService } from '@nestjs/config';
 import { User } from 'src/infrastructure/database/entities/user.entity';
 import { HubspotContactCreatedResponse } from './interfaces/contact-object.interface';
-import Company from 'src/infrastructure/database/entities/company.entity';
+import { Company } from 'src/infrastructure/database/entities/company.entity';
 import { HubspotCompanyCreatedResponse } from './interfaces/company-object.interface';
 import {
   HUBSPOT_COMPANY_OBJECT_TYPE,

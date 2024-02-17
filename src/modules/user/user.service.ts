@@ -11,7 +11,7 @@ import CreateUserDto from './dtos/create-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { QueryFailedError, Repository } from 'typeorm';
 import { validatePassword } from '../../utils/validate-password';
-import { User } from 'src/infrastructure/database/entities/user.entity';
+import { User } from '../../infrastructure/database/entities/user.entity';
 import { CreateUserResponse } from './interfaces/create-user-response.interface';
 
 @Injectable()

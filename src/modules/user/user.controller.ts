@@ -2,7 +2,6 @@ import { Body, Controller, Post } from '@nestjs/common';
 import CreateUserDto from './dtos/create-user.dto';
 import { ApiResponse } from '@nestjs/swagger';
 import { UserService } from './user.service';
-import { User } from 'src/infrastructure/database/entities/user.entity';
 import { CreateUserResponse } from './interfaces/create-user-response.interface';
 import SignInDto from './dtos/sign-in.dto';
 
