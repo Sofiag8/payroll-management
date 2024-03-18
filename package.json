@@ -40,6 +40,8 @@
     "class-validator": "^0.14.1",
     "helmet": "^7.1.0",
     "jest-mock-extended": "^3.0.5",
+    "keycloak-connect": "^24.0.1",
+    "nest-keycloak-connect": "^1.10.0",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "pg": "^8.11.3",

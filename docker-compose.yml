@@ -1,0 +1,46 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_NAME}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - '${POSTGRES_PORT}:5432'
+    volumes:
+      - payroll-management-postgres-data:/var/lib/postgres/data
+    networks:
+      - local-payroll
+
+  keycloak:
+    depends_on:
+      - postgres
+    container_name: keycloak
+    environment:
+      DB_VENDOR: postgres
+      DB_ADDR: postgres
+      DB_DATABASE: ${POSTGRES_NAME}
+      DB_USER: ${POSTGRES_USER}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+    image: quay.io/keycloak/keycloak:latest
+    ports:
+      - '8080:8080'
+    restart: unless-stopped
+    command:
+      - start-dev
+      - --import-realm
+      - --health-enabled=true
+      - --metrics-enabled=true
+    networks:
+      - local-payroll
+
+networks:
+  local-payroll:
+
+volumes:
+  payroll-management-postgres-data:

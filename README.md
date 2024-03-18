@@ -55,6 +55,12 @@ This sample application includes the following features:
 
 To run the application, follow these steps:
 
+### Externals
+
+```bash
+docker-compose --env-file .env up -d
+```
+
 - Clone this repository.
 - Install dependencies using npm install or yarn install.
 - Set up environment variables as per .env.example.

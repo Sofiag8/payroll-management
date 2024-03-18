@@ -9,6 +9,7 @@ import { HubspotModule } from './providers/hubspot/hubspot.module';
 import { CompanyModule } from './modules/company/company.module';
 import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { PassportModule } from '@nestjs/passport';
+import { KeycloakModule } from './providers/keycloak/keycloak.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { PassportModule } from '@nestjs/passport';
     CompanyModule,
     HubspotModule,
     DatabaseModule,
+    KeycloakModule,
     AuthenticationModule,
     ConfigModule.forRoot(),
     TypeOrmModule.forFeature([User]),
